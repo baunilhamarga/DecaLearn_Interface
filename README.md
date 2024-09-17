@@ -40,13 +40,13 @@ You can now run the script to score multiple datasets. The script accepts the fo
 
 - `--dataset_path`: Path to a specific dataset (in `.npz` format). If set to "all" (default), the script processes all datasets in the `Data/Classification` or `Data/Regression` folders, depending on the task.
 - `--task`: Type of task to perform. You can choose either:
-  - `classification` (default)
+  - `classification`
   - `regression`
-  - `all`: Runs both classification and regression tasks on the corresponding datasets.
+  - `all` (default): Runs both classification and regression tasks on the corresponding datasets.
 
 #### Example Commands
 
-1. **Run Classification on All Datasets** (default behavior):
+1. **Run Classification and Regression on All Datasets** (default behavior):
     ```bash
     python main.py
     ```
@@ -62,7 +62,7 @@ You can now run the script to score multiple datasets. The script accepts the fo
 
 3. **Run Classification on a Specific Dataset**:
     ```bash
-    python main.py --dataset_path Data/Classification/sample_dataset.npz
+    python main.py --dataset_path Data/Classification/sample_dataset.npz --task classification
     ```
 
     This will run classification on the `sample_dataset.npz` file using LightGBM.
